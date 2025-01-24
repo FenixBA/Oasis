@@ -1,7 +1,7 @@
-import React from "react"
-import { Box, Container } from "@chakra-ui/react"
-import HeroSection from "./HeroSection"
-import ProductGrid from "./ProductGrid"
+import React from "react";
+import { Box, Container } from "@chakra-ui/react";
+import HeroSection from "./HeroSection";
+import ProductGrid from "./ProductGrid";
 
 const MainSection = () => {
   return (

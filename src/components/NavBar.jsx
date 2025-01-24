@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   Box,
   Flex,
@@ -17,7 +17,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react"
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons"
+import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import logo from "../assets/oasislogo.png";
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure()

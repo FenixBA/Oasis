@@ -2,9 +2,9 @@ import React from "react";
 import { Box, SimpleGrid, Image, Text, Heading, VStack, HStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import All from "../assets/22.jpg"
-import Celeron from "../assets/34.png"
-import Gabinete from "../assets/17.jpg"
+import All from "../assets/22.jpg";
+import Celeron from "../assets/34.png";
+import Gabinete from "../assets/17.jpg";
 
 
 const products = [
