@@ -9,6 +9,7 @@ import {
   Image,
   Icon,
   Link,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import bgImage from "../assets/oasislogo.png";
@@ -22,6 +23,14 @@ const HeroSection = () => {
   const MotionButton = motion(Button);
   const MotionBox = motion(Box);
   const MotionImage = motion(Image); // Hacemos que la imagen sea animada
+
+  // Responsive values
+  const imageMaxWidth = useBreakpointValue({ base: "350px", md: "800px" });
+  const imageMaxHeight = useBreakpointValue({ base: "300px", md: "500px" });
+  const buttonPaddingX = useBreakpointValue({ base: "6", md: "8" });
+  const buttonPaddingY = useBreakpointValue({ base: "4", md: "6" });
+  const fontSize = useBreakpointValue({ base: "md", md: "lg" });
+  const buttonFontSize = useBreakpointValue({ base: "sm", md: "lg" });
 
   return (
     <Box
@@ -50,8 +59,8 @@ const HeroSection = () => {
         alt="Oasis Logo"
         position="absolute"
         transform="translate(-50%, -50%)"
-        maxWidth="800px"
-        maxHeight="500px"
+        maxWidth={imageMaxWidth}
+        maxHeight={imageMaxHeight}
         opacity={1}
         initial={{ opacity: 0, scale: 0.8 }} // Comienza con opacidad 0 y tamaño más pequeño
         animate={{ opacity: 1, scale: 1 }} // Se hace completamente visible y en su tamaño original
@@ -64,8 +73,8 @@ const HeroSection = () => {
         colorScheme="white"
         bg="white"
         color="black"
-        px={8}
-        py={6}
+        px={buttonPaddingX}
+        py={buttonPaddingY}
         display="flex"
         alignItems="center"
         overflow="hidden"
@@ -81,8 +90,7 @@ const HeroSection = () => {
           scale: 0.95, // Se reduce un poco al hacer clic
         }}
       >
-        <Text as="a" href="https://fenixba.mercadoshops.com.ar/" target="_blank"  // Abre el enlace en una nueva pestaña
-      rel="noopener noreferrer" fontWeight="bold" fontSize="lg" mr={4}>
+        <Text as="a" href="https://fenixba.mercadoshops.com.ar/" target="_blank" rel="noopener noreferrer" fontWeight="bold" fontSize={buttonFontSize} mr={4}>
           Explorar Productos
         </Text>
         <MotionBox
