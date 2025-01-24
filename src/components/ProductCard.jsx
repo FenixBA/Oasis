@@ -1,6 +1,6 @@
-import React from "react"
-import { Box, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import React from "react";
+import { Box, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const ProductCard = ({ name, price, imageUrl }) => {
   const bgColor = useColorModeValue("white", "gray.700")
