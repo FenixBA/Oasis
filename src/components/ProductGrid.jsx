@@ -45,7 +45,7 @@ const ProductItem = ({ product, reverse }) => {
         <Heading color="white" as="h3" size="lg" mb={4}>
           {product.name}
         </Heading>
-        <Text fontSize="xl" color="gray.600">
+        <Text fontSize="xl" color="gray.400">
           {product.description}
         </Text>
       </Box>

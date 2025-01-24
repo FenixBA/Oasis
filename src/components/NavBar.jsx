@@ -25,18 +25,23 @@ export default function Navbar() {
     return (
       <Box w="100%">
         <Flex
-          bg={useColorModeValue("black", "gray.800")}
-          color={useColorModeValue("gray.600", "white")}
-          minH={"60px"}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.900")}
-          align={"center"}
-          w="100%"
-        >
+  as="header"
+  position="fixed" // Fijar el Navbar
+  top="0" // Mantenerlo en la parte superior
+  left="0"
+  right="0"
+  bg={useColorModeValue("black", "gray.800")}
+  color={useColorModeValue("gray.600", "white")}
+  minH={"60px"}
+  py={{ base: 2 }}
+  px={{ base: 4 }}
+  borderStyle={"solid"}
+  borderColor={useColorModeValue("gray.200", "gray.900")}
+  align={"center"}
+  zIndex="1000" // Asegura que el Navbar esté sobre otros elementos
+>
           {/* Logo */}
-          <Flex align={"center"}>
+          <Flex align={"center"} as="a" href="/" _hover={{ textDecoration: "none" }}>
             <Image
               src={logo}
               alt="Logo Oasis"
@@ -109,6 +114,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
+      target="_blank"
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -196,20 +202,25 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Inicio",
-    href: "#",
+    href: "/",
   },
   {
-    label: "Servicios",
+    label: "Categorias",
     children: [
       {
-        label: "Servicio 1",
-        subLabel: "Descripción del servicio 1",
-        href: "#",
+        label: "Computación",
+        subLabel: "Computadoras, Notebooks, Componentes y más",
+        href: "https://fenixba.mercadoshops.com.ar/listado/computacion/",
       },
       {
-        label: "Servicio 2",
-        subLabel: "Descripción del servicio 2",
-        href: "#",
+        label: "Electrodomesticos y Aires Ac.",
+        subLabel: "Aires acondicionados, heladeras y más",
+        href: "https://fenixba.mercadoshops.com.ar/listado/electrodomesticos-aires-ac/",
+      },
+      {
+        label: "Electrónica, Audio y Video",
+        subLabel: "Auriculares, Televisores, Parlantes y más",
+        href: "https://fenixba.mercadoshops.com.ar/listado/electronica-audio-video/",
       },
     ],
   },
@@ -219,6 +230,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Contacto",
-    href: "#",
+    href: "/contact",
   },
 ]

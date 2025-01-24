@@ -1,16 +1,22 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar';
-import { Box } from '@chakra-ui/react';
 import MainSection from './components/MainSection';
+import ContactPage from './pages/ContactPage';
+import { Box } from '@chakra-ui/react';
 
 function App() {
-  
   return (
-    <>
-      <Navbar/>
-      <MainSection/>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Box as="main" > {/* Espaciado debajo del Navbar */}
+        <Routes>
+          <Route path="/" element={<MainSection />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Box>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
