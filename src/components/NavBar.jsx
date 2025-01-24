@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react"
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import logo from "../assets/oasislogo.png";
+import { Link as RouterLink } from "react-router-dom";
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure()
   
@@ -70,38 +71,60 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={"row"} spacing={4} display={"flex"} justifyContent={"end"}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
+    {NAV_ITEMS.map((navItem) => (
+      <Box key={navItem.label}>
+        <Popover trigger={"hover"} placement={"bottom-start"}>
+          <PopoverTrigger>
+            <RouterLink
+              to={navItem.href ?? "#"}
+              style={{
+                padding: "8px",
+                fontSize: "sm",
+                fontWeight: 500,
+                color: linkColor,
+                textDecoration: "none",
+              }}
+              onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
+              onMouseLeave={(e) => (e.target.style.color = linkColor)}
+            >
+              {navItem.label}
+            </RouterLink>
+          </PopoverTrigger>
 
-            {navItem.children && (
-              <PopoverContent border={0} boxShadow={"xl"} bg={popoverContentBgColor} p={4} rounded={"xl"} minW={"sm"}>
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
+          {navItem.children && (
+            <PopoverContent
+              border={0}
+              boxShadow={"xl"}
+              bg={popoverContentBgColor}
+              p={4}
+              rounded={"xl"}
+              minW={"sm"}
+            >
+              <Stack>
+                {navItem.children.map((child) => (
+                  <RouterLink
+                    key={child.label}
+                    to={child.href}
+                    style={{
+                      padding: "4px",
+                      fontSize: "sm",
+                      fontWeight: 500,
+                      color: linkColor,
+                      textDecoration: "none",
+                    }}
+                    onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
+                    onMouseLeave={(e) => (e.target.style.color = linkColor)}
+                  >
+                    {child.label}
+                  </RouterLink>
+                ))}
+              </Stack>
+            </PopoverContent>
+          )}
+        </Popover>
+      </Box>
+    ))}
+  </Stack>
   )
 }
 
