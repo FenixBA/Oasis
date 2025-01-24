@@ -6,6 +6,7 @@ import ContactInfoDesktop from "../components/ContactInfoDesktop"
 import ContactInfoMobile from "../components/ContactInfoMobile"
 import WhatsappBubble from "../components/WhatsappBubble"
 import { useMediaQuery } from '@chakra-ui/react';
+import Footer from "../components/Footer"
 const MotionBox = motion(Box)
 
 const ContactPage = () => {
@@ -13,7 +14,7 @@ const ContactPage = () => {
   const textColor = useColorModeValue("gray.800", "gray.100")
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)'); // Cambia el tamaño según tus necesidades
   return (
-    <Box minHeight="100vh" bg={bgColor} color={textColor} py={20} mt="60px">
+    <Box minHeight="100vh" bg={bgColor} color={textColor}  mt="120px">
       <VStack spacing={8} align="center">
         <MotionBox initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <Heading as="h1" size="2xl" textAlign="center" mb={4}>
@@ -53,8 +54,11 @@ const ContactPage = () => {
             >
                 {isLargerThan768 ? <ContactInfoDesktop /> : <ContactInfoMobile />}
             </MotionBox>
+            
       </VStack>
+      <Footer />
       <WhatsappBubble/>
+     
     </Box>
   )
 }

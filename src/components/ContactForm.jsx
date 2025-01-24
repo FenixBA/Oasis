@@ -1,10 +1,18 @@
 import { Box, Button, FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
-
+import { useToast } from "@chakra-ui/react";
 const ContactForm = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Mensaje enviado. Gracias por contactarnos.");
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const toast = useToast();
+  toast({
+    title: "Mensaje enviado.",
+    description: "Gracias por contactarnos, te responderemos lo más pronto posible.",
+    status: "success",
+    duration: 5000,
+    isClosable: true,
+  });
+};
+
 
   return (
     <Box as="form" onSubmit={handleSubmit} maxW="500px" mx="auto" boxShadow="lg" p="6" rounded="md" bg="white">

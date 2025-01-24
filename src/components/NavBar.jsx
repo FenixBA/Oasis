@@ -64,103 +64,95 @@ export default function Navbar() {
   }
   
 
-const DesktopNav = () => {
-  const linkColor = useColorModeValue("white", "gray.200")
-  const linkHoverColor = useColorModeValue("gray.500", "white")
-  const popoverContentBgColor = useColorModeValue("white", "gray.800")
-
-  return (
-    <Stack direction={"row"} spacing={4} display={"flex"} justifyContent={"end"}>
-    {NAV_ITEMS.map((navItem) => (
-      <Box key={navItem.label}>
-        <Popover trigger={"hover"} placement={"bottom-start"}>
-          <PopoverTrigger>
-            <RouterLink
-              to={navItem.href ?? "#"}
-              style={{
-                padding: "8px",
-                fontSize: "sm",
-                fontWeight: 500,
-                color: linkColor,
-                textDecoration: "none",
-              }}
-              onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
-              onMouseLeave={(e) => (e.target.style.color = linkColor)}
-            >
-              {navItem.label}
-            </RouterLink>
-          </PopoverTrigger>
-
-          {navItem.children && (
-            <PopoverContent
-              border={0}
-              boxShadow={"xl"}
-              bg={popoverContentBgColor}
-              p={4}
-              rounded={"xl"}
-              minW={"sm"}
-            >
-              <Stack>
-                {navItem.children.map((child) => (
-                  <RouterLink
-                    key={child.label}
-                    to={child.href}
-                    style={{
-                      padding: "4px",
-                      fontSize: "sm",
-                      fontWeight: 500,
-                      color: linkColor,
-                      textDecoration: "none",
-                    }}
-                    onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
-                    onMouseLeave={(e) => (e.target.style.color = linkColor)}
-                  >
-                    {child.label}
-                  </RouterLink>
-                ))}
-              </Stack>
-            </PopoverContent>
-          )}
-        </Popover>
-      </Box>
-    ))}
-  </Stack>
-  )
-}
-
-const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
-      target="_blank"
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text transition={"all .3s ease"} _groupHover={{ color: "blue.400" }} fontWeight={500}>
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
+  const DesktopNav = () => {
+    const linkColor = useColorModeValue("white", "gray.200")
+    const linkHoverColor = useColorModeValue("gray.500", "white")
+    const popoverContentBgColor = useColorModeValue("white", "gray.800")
+  
+    return (
+      <Stack direction={"row"} spacing={4} display={"flex"} justifyContent={"end"}>
+        {NAV_ITEMS.map((navItem) => (
+          <Box key={navItem.label}>
+            <Popover trigger={"hover"} placement={"bottom-start"}>
+              <PopoverTrigger>
+                <RouterLink
+                  to={navItem.href ?? "#"}
+                  style={{
+                    padding: "8px",
+                    fontSize: "sm",
+                    fontWeight: 500,
+                    color: linkColor,
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
+                  onMouseLeave={(e) => (e.target.style.color = linkColor)}
+                >
+                  {navItem.label}
+                </RouterLink>
+              </PopoverTrigger>
+  
+              {navItem.children && (
+                <PopoverContent
+                  border={0}
+                  boxShadow={"xl"}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={"xl"}
+                  minW={"sm"}
+                >
+                  <Stack>
+                    {navItem.children.map((child) => (
+                      // Aquí usas DesktopSubNav en lugar de RouterLink
+                      <DesktopSubNav
+                        key={child.label}
+                        label={child.label}
+                        href={child.href}
+                        subLabel={child.subLabel}
+                      />
+                    ))}
+                  </Stack>
+                </PopoverContent>
+              )}
+            </Popover>
+          </Box>
+        ))}
       </Stack>
-    </Link>
-  )
-}
+    )
+  }
+  
+  const DesktopSubNav = ({ label, href, subLabel }) => {
+    return (
+      <Link
+        href={href}
+        role={"group"}
+        display={"block"}
+        p={2}
+        rounded={"md"}
+        _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
+        target="_blank"
+      >
+        <Stack direction={"row"} align={"center"}>
+          <Box>
+            <Text transition={"all .3s ease"} _groupHover={{ color: "blue.400" }} fontWeight={500}>
+              {label}
+            </Text>
+            <Text fontSize={"sm"}>{subLabel}</Text>
+          </Box>
+          <Flex
+            transition={"all .3s ease"}
+            transform={"translateX(-10px)"}
+            opacity={0}
+            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+            justify={"flex-end"}
+            align={"center"}
+            flex={1}
+          >
+            <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    )
+  }
 
 const MobileNav = () => {
   return (
@@ -246,10 +238,6 @@ const NAV_ITEMS = [
         href: "https://fenixba.mercadoshops.com.ar/listado/electronica-audio-video/",
       },
     ],
-  },
-  {
-    label: "Sobre Nosotros",
-    href: "#",
   },
   {
     label: "Contacto",
