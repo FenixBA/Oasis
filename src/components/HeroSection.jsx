@@ -12,7 +12,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import bgImage from "../assets/oasislogo.png";
+import bgImage from "../assets/oasislogo.webp";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const HeroSection = () => {
@@ -33,6 +33,7 @@ const HeroSection = () => {
   const buttonFontSize = useBreakpointValue({ base: "sm", md: "lg" });
 
   return (
+    <header>
     <Box
       as={motion.div}
       initial={{ opacity: 0, y: 20 }}
@@ -56,7 +57,7 @@ const HeroSection = () => {
       {/* Imagen de fondo animada */}
       <MotionImage
         src={bgImage}
-        alt="Oasis Logo"
+        alt="Logotipo de Oasis, marca líder en productos tecnológicos."
         position="absolute"
         transform="translate(-50%, -50%)"
         maxWidth={imageMaxWidth}
@@ -69,40 +70,45 @@ const HeroSection = () => {
 
       {/* Botón animado */}
       <MotionButton
-        size="lg"
-        colorScheme="white"
-        bg="white"
-        color="black"
-        px={buttonPaddingX}
-        py={buttonPaddingY}
-        display="flex"
-        alignItems="center"
-        overflow="hidden"
-        position="absolute"
-        bottom="4%" // Distancia desde abajo
-        _hover={{
-          bg: "gray.200", // Cambia a gris claro al pasar el mouse
-        }}
-        whileHover={{
-          scale: 1.05, // Aumenta ligeramente de tamaño
-        }}
-        whileTap={{
-          scale: 0.95, // Se reduce un poco al hacer clic
-        }}
-      >
-        <Text as="a" href="https://fenixba.mercadoshops.com.ar/" target="_blank" rel="noopener noreferrer" fontWeight="bold" fontSize={buttonFontSize} mr={4}>
-          Explorar Productos
-        </Text>
-        <MotionBox
-          as={Icon}
-          initial={{ x: 0 }}
-          whileHover={{ x: 8 }} // La flecha se mueve a la derecha al pasar el mouse
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-        >
-          <ChevronRightIcon boxSize={6} />
-        </MotionBox>
-      </MotionButton>
+  as="a" // Convierte todo el botón en un enlace
+  href="https://fenixba.mercadoshops.com.ar/"
+  target="_blank"
+  rel="noopener noreferrer"
+  size="lg"
+  colorScheme="white"
+  bg="white"
+  color="black"
+  px={buttonPaddingX}
+  py={buttonPaddingY}
+  display="flex"
+  alignItems="center"
+  overflow="hidden"
+  position="absolute"
+  bottom="4%" // Distancia desde abajo
+  _hover={{
+    bg: "gray.200", // Cambia a gris claro al pasar el mouse
+  }}
+  whileHover={{
+    scale: 1.05, // Aumenta ligeramente de tamaño
+  }}
+  whileTap={{
+    scale: 0.95, // Se reduce un poco al hacer clic
+  }}
+>
+  <Text fontWeight="bold" fontSize={buttonFontSize} mr={4}>
+    Explorar Productos
+  </Text>
+  <MotionBox
+    as={Icon}
+    initial={{ x: 0 }}
+    whileHover={{ x: 8 }} // La flecha se mueve a la derecha al pasar el mouse
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+  >
+    <ChevronRightIcon boxSize={6} />
+  </MotionBox>
+</MotionButton>
     </Box>
+    </header>
   );
 };
 

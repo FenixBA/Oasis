@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
-import logo from "../assets/oasislogo.png";
+import logo from "../assets/oasislogo.webp";
 
 const Footer = () => {
   const bgColor = "black"; // Fondo oscuro

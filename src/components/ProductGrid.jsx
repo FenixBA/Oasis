@@ -1,15 +1,36 @@
 import React from "react";
-import { Box, SimpleGrid, Image, Text, Heading, VStack, HStack, useBreakpointValue } from "@chakra-ui/react";
+import { Box, SimpleGrid, Image, Text, Heading, VStack, HStack, useBreakpointValue, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import All from "../assets/22.jpg";
-import Celeron from "../assets/34.png";
-import Gabinete from "../assets/17.jpg";
+import GabOasis from "../assets/22.webp";
+import SSD from "../assets/34.webp";
+import Notebook from "../assets/17.webp";
 
 const products = [
-  { id: 1, name: "Notebook i7 Oasis", description:"Rendimiento máximo, sin límites", image: Gabinete },
-  { id: 2, name: "SSD 1TB Oasis", description:"Velocidad y capacidad, todo en 1TB.", image: Celeron },
-  { id: 3, name: "Gabinete Gamer Oasis", description:"Estilo y potencia en cada partida.", image: All},
+  { 
+    id: 1, 
+    name: "Notebook i7 Oasis", 
+    description: "Rendimiento máximo, sin límites", 
+    image: Notebook, 
+    alt: "Notebook i7 de la marca Oasis, ideal para alto rendimiento.", 
+    link: "https://fenixba.mercadoshops.com.ar/notebook-oasis-technology-intel-i7-1165g7-11th-ram-16gb-ddr4-158-pulgadas/p/MLA41536700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4758109c-a5e2-4e9c-8916-d1acfe595f27&wid=MLA1460836717&sid=search" 
+  },
+  { 
+    id: 2, 
+    name: "SSD 1TB Oasis", 
+    description: "Velocidad y capacidad, todo en 1TB.", 
+    image: SSD, 
+    alt: "SSD 1TB Oasis, almacenamiento rápido y confiable.", 
+    link: "https://fenixba.mercadoshops.com.ar/Disco%20solido%20oasis" 
+  },
+  { 
+    id: 3, 
+    name: "Gabinete Gamer Oasis", 
+    description: "Estilo y potencia en cada partida.", 
+    image: GabOasis, 
+    alt: "Gabinete Gamer Oasis, diseño elegante y funcionalidad.", 
+    link: "https://fenixba.mercadoshops.com.ar/gabinete-gamer-vidrio-templado-6-cooler-rgb-atx-sin-fuente-oasis-technology/p/MLA45125700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4daa509a-e50d-4ce6-89bf-91c9486d34c4&wid=MLA1470334047&sid=search" 
+  },
 ];
 
 const MotionBox = motion(Box);
@@ -17,7 +38,7 @@ const MotionBox = motion(Box);
 const ProductGrid = () => {
   return (
     <VStack spacing={12} width="100%" padding={8}>
-      {products.slice(0, 4).map((product, index) => (
+      {products.map((product, index) => (
         <ProductItem key={product.id} product={product} reverse={index % 2 === 1} />
       ))}
     </VStack>
@@ -48,12 +69,14 @@ const ProductItem = ({ product, reverse }) => {
     >
       {/* Texto del producto */}
       <Box width={textSize} padding={4}>
-        <Heading color="white" as="h3" size={headingSize} mb={4}>
-          {product.name}
-        </Heading>
-        <Text fontSize="xl" color={textColor}>
-          {product.description}
-        </Text>
+        <Link href={product.link} target="_blank" rel="noopener noreferrer">
+          <Heading color="white" as="h3" size={headingSize} mb={4}>
+            {product.name}
+          </Heading>
+          <Text fontSize="xl" color={textColor}>
+            {product.description}
+          </Text>
+        </Link>
       </Box>
 
       {/* Imagen del producto con animación */}
@@ -64,14 +87,16 @@ const ProductItem = ({ product, reverse }) => {
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
         transition={{ duration: 0.8 }}
       >
-        <Image
-          src={product.image}
-          alt={product.name}
-          objectFit="cover"
-          borderRadius="xl"
-          width="100%"
-          height="auto"
-        />
+        <Link href={product.link} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={product.image}
+            alt={product.alt}
+            objectFit="cover"
+            borderRadius="xl"
+            width="100%"
+            height="auto"
+          />
+        </Link>
       </MotionBox>
     </HStack>
   );

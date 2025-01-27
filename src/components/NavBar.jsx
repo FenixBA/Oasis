@@ -18,7 +18,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import logo from "../assets/oasislogo.png";
+import logo from "../assets/oasislogo.webp";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Navbar() {
@@ -44,7 +44,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Flex align={"center"} as="a" href="/" _hover={{ textDecoration: "none" }}>
-          <Image src={logo} alt="Logo Oasis" h="60px" />
+          <Image src={logo} alt="Logo Oasis" h="40px" />
         </Flex>
 
         {/* Links para pantallas grandes */}

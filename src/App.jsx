@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Box as="main" > {/* Espaciado debajo del Navbar */}
+      <Box > {/* Espaciado debajo del Navbar */}
         <Routes>
           <Route path="/" element={<MainSection />} />
           <Route path="/contact" element={<ContactPage />} />
