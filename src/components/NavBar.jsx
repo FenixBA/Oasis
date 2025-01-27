@@ -219,10 +219,10 @@ const MobileNavItem = ({ label, children, href }) => {
           {children &&
             children.map((child) => (
               
-              <RouterLink key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2} to={child.href}>
                 <Icon key={child.label} as={child.icon} color="blue.400" w={5} h={5} mr={2} />
                 {child.label}
-              </RouterLink>
+              </Link>
             ))}
         </Stack>
       </Collapse>
