@@ -57,7 +57,7 @@ const HeroSection = () => {
       {/* Imagen de fondo animada */}
       <MotionImage
         src={bgImage}
-        alt="Logotipo de Oasis, marca líder en productos tecnológicos."
+        alt="Logotipo de Oasis, productos tecnológicos."
         position="absolute"
         transform="translate(-50%, -50%)"
         maxWidth={imageMaxWidth}
@@ -67,8 +67,9 @@ const HeroSection = () => {
         animate={{ opacity: 1, scale: 1 }} // Se hace completamente visible y en su tamaño original
         transition={{ duration: 2 }} // Duración de la animación de 2 segundos
       />
-
+      
       {/* Botón animado */}
+      
       <MotionButton
   as="a" // Convierte todo el botón en un enlace
   href="https://fenixba.mercadoshops.com.ar/"
@@ -95,19 +96,24 @@ const HeroSection = () => {
     scale: 0.95, // Se reduce un poco al hacer clic
   }}
 >
+  
   <Text fontWeight="bold" fontSize={buttonFontSize} mr={4}>
     Explorar Productos
   </Text>
+  
   <MotionBox
     as={Icon}
     initial={{ x: 0 }}
     whileHover={{ x: 8 }} // La flecha se mueve a la derecha al pasar el mouse
     transition={{ duration: 0.3, ease: "easeInOut" }}
   >
+    
     <ChevronRightIcon boxSize={6} />
   </MotionBox>
-</MotionButton>
+  </MotionButton>
+  
     </Box>
+    
     </header>
   );
 };

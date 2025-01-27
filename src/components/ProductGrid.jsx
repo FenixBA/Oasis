@@ -55,7 +55,7 @@ const ProductItem = ({ product, reverse }) => {
   const imageSize = useBreakpointValue({ base: "100%", md: "50%" });
   const textSize = useBreakpointValue({ base: "100%", md: "50%" });
   const headingSize = useBreakpointValue({ base: "md", md: "lg" });
-  const textColor = useBreakpointValue({ base: "gray.600", md: "gray.400" });
+  const textColor = useBreakpointValue({ base: "gray.300", md: "gray.300" , lg: "gray.300", sm: "gray.300", xl: "gray.300" });
 
   return (
     <HStack
@@ -70,10 +70,10 @@ const ProductItem = ({ product, reverse }) => {
       {/* Texto del producto */}
       <Box width={textSize} padding={4}>
         <Link href={product.link} target="_blank" rel="noopener noreferrer">
-          <Heading color="white" as="h3" size={headingSize} mb={4}>
+          <Heading color="white" as="h3" size={headingSize} mb={4} fontSize={["xl","2xl", "3xl", "4xl"]}>
             {product.name}
           </Heading>
-          <Text fontSize="xl" color={textColor}>
+          <Text fontSize={["sm","md", "lg", "xl"]} color={textColor}>
             {product.description}
           </Text>
         </Link>

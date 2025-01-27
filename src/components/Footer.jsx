@@ -39,8 +39,8 @@ const Footer = () => {
                 h="40px"
                 objectFit="contain"
               />
-              <Text fontSize="sm">
-                Ofrecemos los mejores productos para mejorar tu experiencia.
+              <Text as={"h3"} fontSize="sm">
+                Ofrecemos los mejores productos en tecnología y electrodomesticos para tu hogar.
               </Text>
             </VStack>
           </GridItem>

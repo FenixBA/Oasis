@@ -15,10 +15,13 @@ import {
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
+  
   useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon,ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import logo from "../assets/oasislogo.webp";
+import {AiFillHome } from "react-icons/ai";
+import { FaLaptop, FaTv, FaBlender } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Navbar() {
@@ -97,6 +100,10 @@ const DesktopNav = () => {
                 onMouseEnter={(e) => (e.target.style.color = linkHoverColor)}
                 onMouseLeave={(e) => (e.target.style.color = linkColor)}
               >
+                {/* Agregamos el  junto al texto */}
+                {navItem.label === "Inicio" && (
+                  <Icon as={AiFillHome}  mr={2} /> // Aquí agregamos el ícono de inicio (HomeIcon) con un margen a la derecha
+                )}
                 {navItem.label}
               </RouterLink>
             </PopoverTrigger>
@@ -112,7 +119,7 @@ const DesktopNav = () => {
               >
                 <Stack>
                   {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} label={child.label} href={child.href} subLabel={child.subLabel} />
+                    <DesktopSubNav key={child.label} label={child.label} href={child.href} subLabel={child.subLabel} icon={child.icon}/>
                   ))}
                 </Stack>
               </PopoverContent>
@@ -124,7 +131,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, href, subLabel,icon }) => {
   return (
     <Link
       href={href}
@@ -137,7 +144,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
+
           <Text transition={"all .3s ease"} _groupHover={{ color: "blue.400" }} fontWeight={500}>
+            <Icon as={icon} color="blue.400" w={5} h={5} mr={2} />
             {label}
           </Text>
           <Text fontSize={"sm"}>{subLabel}</Text>
@@ -231,16 +240,19 @@ const NAV_ITEMS = [
         label: "Computación",
         subLabel: "Computadoras, Notebooks, Componentes y más",
         href: "https://fenixba.mercadoshops.com.ar/listado/computacion/",
+        icon: FaLaptop,
       },
       {
         label: "Electrodomesticos y Aires Ac.",
         subLabel: "Aires acondicionados, heladeras y más",
         href: "https://fenixba.mercadoshops.com.ar/listado/electrodomesticos-aires-ac/",
+        icon: FaBlender,
       },
       {
         label: "Electrónica, Audio y Video",
         subLabel: "Auriculares, Televisores, Parlantes y más",
         href: "https://fenixba.mercadoshops.com.ar/listado/electronica-audio-video/",
+        icon: FaTv,
       },
     ],
   },
