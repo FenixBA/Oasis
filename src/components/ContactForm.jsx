@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
     <Box as="form" onSubmit={handleSubmit} maxW="500px" mx="auto" boxShadow="lg" p="6" rounded="md" bg="white">
       <FormControl id="name" isRequired mb="4">
         <FormLabel>Nombre</FormLabel>
-        <Input type="text" placeholder="Ingresa tu nombre completo" />
+        <Input type="text" placeholder="Ingresa tu nombre" />
       </FormControl>
       <FormControl id="email" isRequired mb="4">
         <FormLabel>Correo Electrónico</FormLabel>
