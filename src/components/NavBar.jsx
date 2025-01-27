@@ -184,17 +184,18 @@ const MobileNavItem = ({ label, children, href }) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
         py={2}
-        as={Link}
-        href={href ?? "#"}
+        
         justify={"space-between"}
         align={"center"}
         _hover={{
           textDecoration: "none",
         }}
       >
+        <RouterLink to={href} style={{ textDecoration: "none" }}>
         <Text fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
           {label}
         </Text>
+        </RouterLink>
         {children && (
           <Icon
             as={ChevronDownIcon}
@@ -219,7 +220,7 @@ const MobileNavItem = ({ label, children, href }) => {
           {children &&
             children.map((child) => (
               
-              <Link key={child.label} py={2} to={child.href}>
+              <Link key={child.label} py={2} href={child.href} target="_blank">
                 <Icon key={child.label} as={child.icon} color="blue.400" w={5} h={5} mr={2} />
                 {child.label}
               </Link>
