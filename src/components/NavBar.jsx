@@ -242,19 +242,19 @@ const NAV_ITEMS = [
       {
         label: "Computación",
         subLabel: "Computadoras, Notebooks, Componentes y más",
-        href: "https://fenixba.mercadoshops.com.ar/listado/computacion/",
+        href: "https://www.fenixba.com/listado/computacion/",
         icon: FaLaptop,
       },
       {
         label: "Electrodomesticos y Aires Ac.",
         subLabel: "Aires acondicionados, heladeras y más",
-        href: "https://fenixba.mercadoshops.com.ar/listado/electrodomesticos-aires-ac/",
+        href: "https://www.fenixba.com/listado/electrodomesticos-aires-ac/",
         icon: FaBlender,
       },
       {
         label: "Electrónica, Audio y Video",
         subLabel: "Auriculares, Televisores, Parlantes y más",
-        href: "https://fenixba.mercadoshops.com.ar/listado/electronica-audio-video/",
+        href: "https://www.fenixba.com/listado/electronica-audio-video/",
         icon: FaTv,
       },
     ],

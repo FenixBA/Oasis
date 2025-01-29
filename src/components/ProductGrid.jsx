@@ -13,7 +13,7 @@ const products = [
     description: "Rendimiento máximo, sin límites", 
     image: Notebook, 
     alt: "Notebook i7 de la marca Oasis, ideal para alto rendimiento.", 
-    link: "https://fenixba.mercadoshops.com.ar/notebook-oasis-technology-intel-i7-1165g7-11th-ram-16gb-ddr4-158-pulgadas/p/MLA41536700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4758109c-a5e2-4e9c-8916-d1acfe595f27&wid=MLA1460836717&sid=search" 
+    link: "https://www.fenixba.com/notebook-oasis-technology-intel-i7-1165g7-11th-ram-16gb-ddr4-158-pulgadas/p/MLA41536700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4758109c-a5e2-4e9c-8916-d1acfe595f27&wid=MLA1460836717&sid=search" 
   },
   { 
     id: 2, 
@@ -21,7 +21,7 @@ const products = [
     description: "Velocidad y capacidad, todo en 1TB.", 
     image: SSD, 
     alt: "SSD 1TB Oasis, almacenamiento rápido y confiable.", 
-    link: "https://fenixba.mercadoshops.com.ar/Disco%20solido%20oasis" 
+    link: "https://www.fenixba.com/Disco%20solido%20oasis" 
   },
   { 
     id: 3, 
@@ -29,7 +29,7 @@ const products = [
     description: "Estilo y potencia en cada partida.", 
     image: GabOasis, 
     alt: "Gabinete Gamer Oasis, diseño elegante y funcionalidad.", 
-    link: "https://fenixba.mercadoshops.com.ar/gabinete-gamer-vidrio-templado-6-cooler-rgb-atx-sin-fuente-oasis-technology/p/MLA45125700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4daa509a-e50d-4ce6-89bf-91c9486d34c4&wid=MLA1470334047&sid=search" 
+    link: "https://www.fenixba.com/gabinete-gamer-vidrio-templado-6-cooler-rgb-atx-sin-fuente-oasis-technology/p/MLA45125700?pdp_filters=seller_id%3A63214057#polycard_client=search-nordic-mshops&position=1&search_layout=stack&type=item&tracking_id=4daa509a-e50d-4ce6-89bf-91c9486d34c4&wid=MLA1470334047&sid=search" 
   },
 ];
 

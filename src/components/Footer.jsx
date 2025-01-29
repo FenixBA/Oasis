@@ -51,19 +51,19 @@ const Footer = () => {
               <Text fontSize="xl" fontWeight="bold">
                 Categorías
               </Text>
-              <Link href="https://fenixba.mercadoshops.com.ar/listado/computacion/" _hover={{ color: "gray.300" }} target="_blank">
+              <Link href="https://www.fenixba.com/listado/computacion/" _hover={{ color: "gray.300" }} target="_blank">
                 Computación
               </Link>
-              <Link href="https://fenixba.mercadoshops.com.ar/listado/hogar-muebles-jardin/" _hover={{ color: "gray.300" }} target="_blank">
+              <Link href="https://www.fenixba.com/listado/hogar-muebles-jardin/" _hover={{ color: "gray.300" }} target="_blank">
                 Hogar, Muebles y Jardín
               </Link>
-              <Link href="https://fenixba.mercadoshops.com.ar/listado/electrodomesticos-aires-ac/" _hover={{ color: "gray.300" }} target="_blank">
+              <Link href="https://www.fenixba.com/listado/electrodomesticos-aires-ac/" _hover={{ color: "gray.300" }} target="_blank">
                 Electrodomésticos y Aires Ac.
               </Link>
-              <Link href="https://fenixba.mercadoshops.com.ar/listado/electronica-audio-video/" _hover={{ color: "gray.300" }} target="_blank">
+              <Link href="https://www.fenixba.com/listado/electronica-audio-video/" _hover={{ color: "gray.300" }} target="_blank">
                 Electrónica, Audio y Video
               </Link>
-              <Link href="https://fenixba.mercadoshops.com.ar/listado/herramientas/" _hover={{ color: "gray.300" }} target="_blank">
+              <Link href="https://www.fenixba.com/listado/herramientas/" _hover={{ color: "gray.300" }} target="_blank">
                 Herramientas
               </Link>
             </VStack>

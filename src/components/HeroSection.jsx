@@ -72,7 +72,7 @@ const HeroSection = () => {
       
       <MotionButton
   as="a" // Convierte todo el botón en un enlace
-  href="https://fenixba.mercadoshops.com.ar/"
+  href="https://www.fenixba.com/"
   target="_blank"
   rel="noopener noreferrer"
   size="lg"
