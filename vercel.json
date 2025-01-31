@@ -2,7 +2,8 @@
     "rewrites": [
       { "source": "/(.*)", "destination": "/" },
       {"source": "/robots.txt", "destination": "/public/robots.txt"},
-      {"source": "/sitemap.xml", "destination": "/public/sitemap.xml"}
+      {"source": "/sitemap.xml", "destination": "/public/sitemap.xml"},
+      {"source": "/logo.webp", "destination": "/src/assets/logo.webp"}
     ]
   }
   
