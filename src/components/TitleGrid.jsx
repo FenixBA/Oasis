@@ -13,7 +13,7 @@ const TitleGrid = () => {
           mb={4}
           fontSize={["xl","2xl", "3xl", "4xl"]} // Tamaño de fuente responsivo: móvil, tablet, desktop
         >
-          Oasis y FénixBA: Electrodomésticos, Tecnología y Artículos para el Hogar
+          Oasis y FénixBA: Electrodomésticos, Tecnología y Artículos para el Hogar 
         </Heading>
         <Text
           fontSize={["sm","md", "lg", "xl"]} // Tamaño responsivo para el texto
