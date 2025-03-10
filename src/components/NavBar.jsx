@@ -260,6 +260,10 @@ const NAV_ITEMS = [
     ],
   },
   {
+    label: "Catálogo",
+    href: "/catalogo",
+  },
+  {
     label: "Contacto",
     href: "/contact",
   },
