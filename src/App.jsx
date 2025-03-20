@@ -3,6 +3,7 @@ import Navbar from './components/NavBar';
 import MainSection from './components/MainSection';
 import ContactPage from './pages/ContactPage';
 import MayoristaPage from './pages/MayoristaPage';
+import CatalogoPage from './pages/CatalogoPage';
 import { Box } from '@chakra-ui/react';
 
 function App() {
