@@ -80,29 +80,30 @@ const Footer = () => {
               <HStack spacing={4}>
               <Text fontSize="lg">Teléfonos:</Text>
               <Link 
-                    href="tel:+541142405853" 
+                    href="tel:+541163504662" 
                     fontSize="lg" 
                     color="gray.100" 
                     _hover={{ textDecoration: 'none', color: "gray.300" }}
                 >
-                    42405853 
+                    1163504662 
                 </Link>
               <Link 
-                    href="tel:+541140364647" 
+                    href="tel:+541160083070" 
                     fontSize="lg" 
                     color="gray.100" 
                     _hover={{ textDecoration: 'none', color: "gray.300" }}
                 >
-                1140364647
+                1160083070
                 </Link>
                 
                 </HStack>
               <Link href="mailto:ventas@fenixba.com" _hover={{ color: "gray.300" }}>
-                ventas@fenixba.com
+                earanda@fenixba.com
               </Link>
               <Link 
                     href="https://www.google.com/maps/place/FENIX+BA/@-34.6984667,-58.3995653,17z/data=!4m15!1m8!3m7!1s0x95bccce15ce25f0d:0x659332ebe23ed2b1!2sGdor.+Udaondo+2002,+B1826+Lan%C3%BAs,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.6984667!4d-58.3995653!16s%2Fg%2F11gfk195t5!3m5!1s0x95bccce15cdd7555:0x6251601d530b8b54!8m2!3d-34.6984667!4d-58.3995653!16s%2Fg%2F11c0_2_jjn?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D"  
-                    fontSize="lg" 
+                    fontSize="lg"
+                    target="_blank"
                     color="gray.100" 
                     _hover={{ textDecoration: 'none', color: "gray.300" }}
                 >

@@ -76,6 +76,7 @@ const HeroSection = () => {
   target="_blank"
   rel="noopener noreferrer"
   size="lg"
+  borderRadius="full"
   colorScheme="white"
   bg="white"
   color="black"
@@ -97,8 +98,8 @@ const HeroSection = () => {
   }}
 >
   
-  <Text fontWeight="bold" fontSize={buttonFontSize} mr={4}>
-    Explorar Productos
+  <Text fontFamily="Jost" fontWeight="bold" fontSize={buttonFontSize} mr={4}>
+  {"\u2003"}Ver Productos{"\u00A0\u00A0"}
   </Text>
   
   <MotionBox

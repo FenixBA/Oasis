@@ -6,6 +6,8 @@ import GabOasis from "../assets/22.webp";
 import SSD from "../assets/34.webp";
 import Notebook from "../assets/17.webp";
 
+
+
 const products = [
   { 
     id: 1, 
@@ -67,6 +69,7 @@ const ProductItem = ({ product, reverse }) => {
       justify="space-between"
       flexWrap="wrap" // Permite que los elementos se apilen en pantallas pequeñas
     >
+
       {/* Texto del producto */}
       <Box width={textSize} padding={4}>
         <Link href={product.link} target="_blank" rel="noopener noreferrer">

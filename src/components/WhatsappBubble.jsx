@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function WhatsappBubble() {
   return (
     <Link
-      href="https://api.whatsapp.com/send?phone=541140364647" // Reemplaza este número por el de tu empresa
+      href="https://api.whatsapp.com/send?phone=541163504662" // Reemplaza este número por el de tu empresa
       isExternal
     >
       <Box

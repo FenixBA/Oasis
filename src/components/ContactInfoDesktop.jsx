@@ -7,31 +7,31 @@ function ContactInfoDesktop() {
             <HStack spacing={4}>
                 <Icon as={FaEnvelope} boxSize={6} />
                 <Link 
-                    href="mailto:ventas@fenixba.com" 
+                    href="mailto:earanda@fenixba.com" 
                     fontSize="lg" 
                     color="blue.500" 
                     _hover={{ textDecoration: 'none', color: 'blue.700' }}
                 >
-                    ventas@fenixba.com
+                    earanda@fenixba.com
                 </Link>
             </HStack>
             <HStack spacing={4}>
                 <Icon as={FaPhone} boxSize={6} />
                 <Link 
-                    href="tel:+541142405853" 
+                    href="tel:+541160083070" 
                     fontSize="lg" 
                     color="blue.500" 
                     _hover={{ textDecoration: 'none', color: 'blue.700' }}
                 >
-                    Tel: 42405853
+                    Tel: 1160083070
                 </Link>
                 <Link 
-                    href="tel:+541140364647" 
+                    href="tel:+541163504662" 
                     fontSize="lg" 
                     color="blue.500" 
                     _hover={{ textDecoration: 'none', color: 'blue.700' }}
                 >
-                    1140364647
+                    1163504662
                 </Link>
             </HStack>
             <HStack spacing={4} >

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Oasis";
+    src: url("./src/assets/fonts/Cano.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Jost";
+    src: url("./src/assets/fonts/Jost.ttf") format("trueType");
+    font-weight: normal;
+    font-style: normal;
+  }
+  

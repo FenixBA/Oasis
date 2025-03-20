@@ -16,9 +16,11 @@ const ContactPage = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)"); // Cambia el tamaño según tus necesidades
 
   return (
-    <Box minHeight="100vh" bg={bgColor} color={textColor} mt="120px">
-      <VStack spacing={8} align="center">
-        <MotionBox initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+    <Box minHeight="100vh" bg={bgColor} color={textColor} >
+      <Box w="100%" h="80px" background="black"/>
+      <VStack spacing={8} align="center" >
+        
+        <MotionBox mt={20} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <Heading as="h1" size="2xl" textAlign="center" mb={4}>
             Contacto
           </Heading>
