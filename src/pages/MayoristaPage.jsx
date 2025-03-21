@@ -25,10 +25,11 @@ const MayoristaPage = () => {
           fontWeight="bold"
           mb={4}
           fontSize={["xl","2xl", "3xl", "4xl"]}
+          fontFamily="Jost"
         >
           ¿Sos revendedor y te interesan nuestros productos?
         </Heading>
-        <Text>
+        <Text fontFamily="Jost" fontSize={["sm","md", "lg", "xl"]} maxW="2xl" mx="auto" mb={8}>
           Hablá con un representante y conocé nuestros precios mayoristas.
         </Text>
         <Button
@@ -41,6 +42,7 @@ const MayoristaPage = () => {
           mt={12}
           fontSize={["sm", "md", "lg"]}
           rightIcon={<Icon as={ChevronRightIcon} />}
+          fontFamily="Jost"
         >
           Contactanos
         </Button>

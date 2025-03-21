@@ -10,15 +10,16 @@ const TitleGrid = () => {
           size="lg"
           color="white" // Cambia el color a uno más atractivo
           fontWeight="bold"
+          fontFamily="Jost"
           mb={4}
           fontSize={["xl","2xl", "3xl", "4xl"]} // Tamaño de fuente responsivo: móvil, tablet, desktop
         >
 <DecryptedText
-  text="Oasis y FénixBA: Electrodomésticos, Tecnología y Artículos para el Hogar "
+  text="Oasis:Tecnología y Artículos para el Hogar "
   animateOn="view"
   revealDirection="start"
   sequential={true}
-  speed={10}
+  speed={15}
   useOriginalCharsOnly={true}
 />    
         </Heading>
@@ -27,6 +28,7 @@ const TitleGrid = () => {
           color="gray.200"
           maxW="2xl"
           mx="auto"
+          fontFamily="Jost"
           mb={8}
         >
           Encontrá los productos más innovadores y de calidad en tecnología, notebooks, computadoras y electrodomésticos para tu hogar.

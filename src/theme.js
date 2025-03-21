@@ -3,8 +3,8 @@ import "@fontsource/inter"; // Importa la fuente
 
 const theme = extendTheme({
   fonts: {
-    heading: "Oasis, sans-serif", // Para títulos
-    body: "Oasis, sans-serif", // Para texto normal
+    heading: "Jost, sans-serif", // Para títulos
+    body: "Jost, sans-serif", // Para texto normal
   },
 });
 
